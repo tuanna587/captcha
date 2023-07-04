@@ -35,7 +35,7 @@
   },
   "autoload": {
     "psr-4": {
-      "tuanna587\\Captcha\\": "src/"
+      "Mews\\Captcha\\": "src/"
     },
     "files": [
       "src/helpers.php"
@@ -46,17 +46,17 @@
       "tests"
     ],
     "psr-4": {
-      "tuanna587\\Test\\": "tests/"
+      "Mews\\Test\\": "tests/"
     }
   },
   "minimum-stability": "stable",
   "extra": {
     "laravel": {
       "providers": [
-        "tuanna587\\Captcha\\CaptchaServiceProvider"
+        "Mews\\Captcha\\CaptchaServiceProvider"
       ],
       "aliases": {
-        "Captcha": "tuanna587\\Captcha\\Facades\\Captcha"
+        "Captcha": "Mews\\Captcha\\Facades\\Captcha"
       }
     }
   }

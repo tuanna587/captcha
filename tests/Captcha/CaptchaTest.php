@@ -1,6 +1,6 @@
 <?php
 
-namespace tuanna587\Tests\Captcha;
+namespace Mews\Tests\Captcha;
 
 use PHPUnit\Framework\TestCase;
 

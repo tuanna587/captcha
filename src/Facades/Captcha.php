@@ -1,11 +1,11 @@
 <?php
 
-namespace tuanna587\Captcha\Facades;
+namespace Mews\Captcha\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \tuanna587\Captcha\Captcha
+ * @see \Mews\Captcha\Captcha
  */
 class Captcha extends Facade
 {

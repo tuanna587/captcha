@@ -68,7 +68,7 @@ Find the `providers` key in `config/app.php` and register the Captcha Service Pr
 ```php
     'providers' => [
         // ...
-        'tuanna587\Captcha\CaptchaServiceProvider',
+        'Mews\Captcha\CaptchaServiceProvider',
     ]
 ```
 
@@ -77,7 +77,7 @@ for Laravel 5.1+
 ```php
     'providers' => [
         // ...
-        tuanna587\Captcha\CaptchaServiceProvider::class,
+        Mews\Captcha\CaptchaServiceProvider::class,
     ]
 ```
 
@@ -86,7 +86,7 @@ Find the `aliases` key in `config/app.php`.
 ```php
     'aliases' => [
         // ...
-        'Captcha' => 'tuanna587\Captcha\Facades\Captcha',
+        'Captcha' => 'Mews\Captcha\Facades\Captcha',
     ]
 ```
 
@@ -95,7 +95,7 @@ for Laravel 5.1+
 ```php
     'aliases' => [
         // ...
-        'Captcha' => tuanna587\Captcha\Facades\Captcha::class,
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
     ]
 ```
 
