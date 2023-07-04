@@ -1,13 +1,13 @@
 <?php
 
-namespace Mews\Captcha;
+namespace tuanna587\Captcha;
 
 use Exception;
 use Illuminate\Routing\Controller;
 
 /**
  * Class CaptchaController
- * @package Mews\Captcha
+ * @package tuanna587\Captcha
  */
 class CaptchaController extends Controller
 {
