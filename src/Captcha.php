@@ -344,7 +344,7 @@ class Captcha
         }
 
         $hash = $this->hasher->make($key);
-        if($this->encrypt) $hash = Crypt::encrypt($hash);
+        if ($this->encrypt) $hash = Crypt::encrypt($hash);
 
         $this->session->put('captcha', [
             'sensitive' => $this->sensitive,
@@ -408,7 +408,7 @@ class Captcha
      */
     protected function fontSize(): int
     {
-        return rand($this->image->height() - 10, $this->image->height());
+        return rand($this->image->height() - 20, $this->image->height() - 20);
     }
 
     /**
@@ -485,7 +485,7 @@ class Captcha
             $value = $this->str->lower($value);
         }
 
-        if($encrypt) $key = Crypt::decrypt($key);
+        if ($encrypt) $key = Crypt::decrypt($key);
         $check = $this->hasher->check($value, $key);
         // if verify pass,remove session
         if ($check) {
@@ -501,7 +501,8 @@ class Captcha
      * @param string $key
      * @return string
      */
-    protected function get_cache_key($key) {
+    protected function get_cache_key($key)
+    {
         return 'captcha_' . md5($key);
     }
 
@@ -521,8 +522,8 @@ class Captcha
 
         $this->configure($config);
 
-        if(!$this->sensitive) $value = $this->str->lower($value);
-        if($this->encrypt) $key = Crypt::decrypt($key);
+        if (!$this->sensitive) $value = $this->str->lower($value);
+        if ($this->encrypt) $key = Crypt::decrypt($key);
         return $this->hasher->check($value, $key);
     }
 
