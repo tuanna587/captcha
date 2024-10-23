@@ -33,7 +33,7 @@ class CaptchaServiceProvider extends ServiceProvider
         } else {
             /* @var Router $router */
             $router = $this->app['router'];
-            if ((double)$this->app->version() >= 5.2) {
+            if ((float)$this->app->version() >= 5.2) {
                 $router->get('captcha/api/{config?}', '\Mews\Captcha\CaptchaController@getCaptchaApi')->middleware('web');
                 $router->get('captcha/{config?}', '\Mews\Captcha\CaptchaController@getCaptcha')->middleware('web');
             } else {
